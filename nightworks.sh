@@ -3,8 +3,10 @@
 # Command queue run at scheduled time              #
 # Author: yinxt at 2017.12.04                      #
 # sudo apt-get install at //install command at     #
-# FAIL: at -f night.sh now +2 hours                #
 # SUCESS: echo "./night.sh" |at now +1 minutes     #
+####################################################
+# *Do NOT use: at -f night.sh now +2 hours (source #
+#              result not return to this shell)    #
 ####################################################
 log_file=./log-$(date +%Y%m%d-%H:%M:%S).txt
 exec 2>&1 >$log_file
